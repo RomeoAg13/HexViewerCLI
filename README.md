@@ -1,25 +1,28 @@
 # Hex Viewer CLI
-Un outil en ligne de commande écrit en Go pour afficher le contenu d’un fichier sous forme d’hex dump, avec l’offset, les données en hexadécimal et leur équivalent ASCII.
 
-## Fonctionnalités
-- Affichage de l’offset en hexadécimal (8 chiffres).
-- Lecture par blocs de taille configurable (par défaut 16 octets).
-- Affichage des données en hexadécimal.
-- Affichage du texte lisible (caractères ASCII imprimables), les autres sont remplacés par `.`.
-- Gestion des fichiers binaires et textuels.
+A command-line tool written in Go to display the content of a file as a hex dump, including the offset, hexadecimal data, and their ASCII equivalent.
 
-## Comment utiliser
+## Features
+- Display the offset in hexadecimal (8 digits).
+- Read the file in configurable block sizes (default is 16 bytes).
+- Show data in hexadecimal format.
+- Display readable ASCII characters; all others are replaced by a `.`.
+- Supports both binary and text files.
 
-1. **Compiler projet**
+## How to use
+
+1. **Build the project**
    ```go build .```
 2. **Run the program**
-   ./cli file_name
+   ```./cli filename```
 3. **Enter block size** (optional, default is 16):
 - The program will ask for the block size (in bytes) at startup.
 
 ## Example output
-```00000000 7061636b616765206d61696e0a package main.```
-```00000010 0a696d706f727420280a202022 package main.```
+```
+00000000 7061636b616765206d61696e0a |package main.|
+00000010 0a696d706f727420280a202022 | package main.|
+```
 
 ## Project structure
 
